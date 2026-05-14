@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#6EE7B7" />
+      <stop offset="1" stop-color="#60A5FA" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="240" fill="#0f172a" />
+  <rect x="20" y="20" width="1160" height="200" rx="16" fill="url(#g)" opacity="0.12" />
+  <text x="60" y="140" font-family="Segoe UI, Roboto, Arial" font-size="72" fill="#ffffff">AlxPle</text>
+  <text x="60" y="190" font-family="Segoe UI, Roboto, Arial" font-size="20" fill="#e6eef8">Web Developer • Open Source • UI Enthusiast</text>
+</svg>
