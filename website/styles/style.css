@@ -1,0 +1,335 @@
+:root {
+    /* Nord palette as default */
+    --bg: #2E3440;
+    --fg: #ECEFF4;
+    --muted: #4C566A;
+    --accent: #88C0D0;
+    --elev: rgba(0, 0, 0, 0.3);
+    --radius: 10px;
+    --shadow-sm: 0 6px 18px rgba(2, 6, 23, 0.08);
+    --shadow-md: 0 10px 26px rgba(2, 6, 23, 0.12);
+    --space: 1rem;
+}
+
+html {
+    transition: background-color 220ms ease, color 220ms ease;
+}
+
+/* Theme variants applied on the <html data-theme="..."> element */
+html[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #111111;
+    --muted: #6b7280;
+    --accent: #0b76ef;
+    --elev: rgba(2, 6, 23, 0.04);
+}
+
+html[data-theme="nord"] {
+    --bg: #2E3440;
+    --fg: #ECEFF4;
+    --muted: #4C566A;
+    --accent: #88C0D0;
+    --elev: rgba(0, 0, 0, 0.3);
+}
+
+.hero {
+    position: relative;
+}
+
+html[data-theme="dark"] {
+    --bg: #0b0f14;
+    --fg: #e6eef6;
+    --muted: #9aa8b6;
+    --accent: #7ee787;
+    --elev: rgba(255, 255, 255, 0.04);
+}
+
+html[data-theme="sunset"] {
+    --bg: #fff7f3;
+    --fg: #2b1b17;
+    --muted: #6b4a43;
+    --accent: #ff6b6b;
+    --elev: rgba(255, 107, 107, 0.06);
+}
+
+html[data-theme="mint"] {
+    --bg: #f4fffb;
+    --fg: #0b2a2a;
+    --muted: #3b6b66;
+    --accent: #00c4a7;
+    --elev: rgba(0, 196, 167, 0.06);
+}
+
+html[data-theme="violet"] {
+    --bg: #faf5ff;
+    --fg: #221133;
+    --muted: #7b6b8a;
+    --accent: #7c3aed;
+    --elev: rgba(124, 58, 237, 0.06);
+}
+
+html[data-theme="solarized"] {
+    --bg: #fdf6e3;
+    --fg: #073642;
+    --muted: #586e75;
+    --accent: #b58900;
+    --elev: rgba(181, 137, 0, 0.06);
+}
+
+/* Tailwind-inspired palettes */
+html[data-theme="slate"] {
+    --bg: #f8fafc;
+    --fg: #0f1724;
+    --muted: #64748b;
+    --accent: #3b82f6;
+    --elev: rgba(2, 6, 23, 0.04);
+}
+
+html[data-theme="gray"] {
+    --bg: #fafafa;
+    --fg: #111827;
+    --muted: #6b7280;
+    --accent: #374151;
+    --elev: rgba(2, 6, 23, 0.04);
+}
+
+html[data-theme="rose"] {
+    --bg: #fff1f2;
+    --fg: #5f1f21;
+    --muted: #9f3a3a;
+    --accent: #f43f5e;
+    --elev: rgba(244, 63, 94, 0.06);
+}
+
+html[data-theme="amber"] {
+    --bg: #fffbeb;
+    --fg: #423107;
+    --muted: #b45309;
+    --accent: #f59e0b;
+    --elev: rgba(245, 158, 11, 0.06);
+}
+
+html[data-theme="emerald"] {
+    --bg: #ecfdf5;
+    --fg: #064e3b;
+    --muted: #166534;
+    --accent: #10b981;
+    --elev: rgba(16, 185, 129, 0.06);
+}
+
+html[data-theme="sky"] {
+    --bg: #f0f9ff;
+    --fg: #0c4a6e;
+    --muted: #60a5fa;
+    --accent: #0ea5ff;
+    --elev: rgba(14, 165, 255, 0.06);
+}
+
+html[data-theme="indigo"] {
+    --bg: #eef2ff;
+    --fg: #312e81;
+    --muted: #6366f1;
+    --accent: #4f46e5;
+    --elev: rgba(79, 70, 229, 0.06);
+}
+
+html[data-theme="purple"] {
+    --bg: #faf5ff;
+    --fg: #3c1361;
+    --muted: #7c3aed;
+    --accent: #8b5cf6;
+    --elev: rgba(139, 92, 246, 0.06);
+}
+
+html[data-theme="pink"] {
+    --bg: #fff1f2;
+    --fg: #451225;
+    --muted: #f472b6;
+    --accent: #ec4899;
+    --elev: rgba(236, 72, 153, 0.06);
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.site {
+    max-width: 48rem;
+    width: 100%
+}
+
+/* Better content container visuals */
+.site {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+    padding: calc(var(--space) * 1.25);
+    border-radius: calc(var(--radius) * 0.6);
+}
+
+.hero {
+    line-height: 1.1
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.25rem
+}
+
+.tagline {
+    margin: .5rem 0;
+    color: var(--muted)
+}
+
+.contacts {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--accent) 30%, transparent);
+    outline-offset: 3px;
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+.about {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: var(--fg)
+}
+
+footer {
+    margin-top: 3rem;
+    color: var(--muted)
+}
+
+/* Palette die button styles */
+#palette-die {
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), var(--elev));
+    color: var(--accent);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    padding: 6px;
+    transition: transform 180ms ease, box-shadow 180ms ease, color 180ms ease, background 180ms ease;
+    z-index: 60;
+}
+
+/* spinning animation handled by toggling class */
+.spinning {
+    animation: spin 300ms cubic-bezier(.2, .9, .2, 1);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    40% {
+        transform: rotate(28deg) scale(.98);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+#palette-die svg {
+    width: 80%;
+    height: 80%;
+    display: block;
+}
+
+/* Container for button + label */
+/* palette control placed in header by default; fixed on small screens */
+#palette-control {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 60;
+}
+
+@media (max-width: 520px) {
+    #palette-control {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+    }
+}
+
+.palette-label {
+    display: inline-block;
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--fg);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    line-height: 1;
+    box-shadow: 0 4px 10px rgba(2, 6, 23, 0.06);
+    transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+    user-select: none;
+}
+
+/* Slightly darker label background on dark-like themes */
+html[data-theme="nord"] .palette-label,
+html[data-theme="dark"] .palette-label {
+    background: rgba(236, 239, 244, 0.06);
+}
+
+@media (max-width: 520px) {
+    .palette-label {
+        display: none;
+    }
+}
+
+#palette-die:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 26px rgba(2, 6, 23, 0.12);
+}
+
+#palette-die:active {
+    transform: rotate(18deg) scale(.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        transition: none;
+    }
+
+    #palette-die {
+        transition: none;
+    }
+}

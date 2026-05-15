@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#2E3440" id="meta-theme-color">
+    <title>Alex — Minimalist Personal Site</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <main class="site">
+        <header class="hero">
+            <div class="greetings">
+                <h1>Hello, I'm Alex!
+
+                </h1>
+                <!-- palette control moved into header -->
+                <div id="palette-control" aria-live="polite">
+                    <span id="palette-label" class="palette-label" aria-hidden="true">Nord</span>
+                    <button id="palette-die" aria-label="Change color palette" title="Change palette" type="button">
+                        <svg viewBox="0 0 64 64" width="56" height="56" aria-hidden="true" focusable="false">
+                            <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round">
+                                <path d="M8 24 L32 8 L56 24 L32 40 Z" fill="currentColor" opacity="0.98" />
+                                <path d="M8 40 L32 56 L56 40" />
+                                <path d="M8 24 L8 40" />
+                                <path d="M56 24 L56 40" />
+                                <circle cx="24" cy="24" r="2.5" fill="#fff" />
+                                <circle cx="40" cy="24" r="2.5" fill="#fff" />
+                                <circle cx="24" cy="40" r="2.5" fill="#fff" />
+                                <circle cx="40" cy="40" r="2.5" fill="#fff" />
+                            </g>
+                        </svg>
+                    </button>
+
+                </div>
+                <!-- /palette control -->
+            </div>
+            <p class="tagline">Web developer</p>
+            <nav class="contacts">
+                <a href="mailto:pletnov.alex@gmail.com">pletnov.alex@gmail.com</a>
+                <a href="https://github.com/AlxPle" target="_blank" rel="noopener">GitHub</a>
+            </nav>
+
+
+        </header>
+
+        <section class="about">
+            <h2>Projects</h2>
+            <ul class="projects">
+                <li><a href="https://github.com/AlxPle/Watch-Later-button" target="_blank"
+                        rel="noopener">Watch-Later-button</a>
+                    — chrome extension for saving videos to watch later.</li>
+            </ul>
+            <p><a href="https://github.com/AlxPle" target="_blank" rel="noopener">More on GitHub</a></p>
+            <p class="interests">🎼 Music • 🎮 Games • 🍿 Anime • 🧑‍💻 Code • 🐸 Frog Stickers Fan • ☕ Coffee Lover •
+                🏀
+                Basketball Semi‑Pro</p>
+        </section>
+
+        <footer>
+            <small>© 2026 Alex</small>
+        </footer>
+    </main>
+
+
+    <script src="palette.js" defer></script>
+</body>
+
+</html>

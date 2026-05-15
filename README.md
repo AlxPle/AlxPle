@@ -1,6 +1,6 @@
 # Hello, I'm Alex! 👋
 
-Based in 🇩🇪 Germany and born in 🇺🇦 Ukraine.
+Based in 🇩🇪 Germany.
 
 ## Projects
 [Watch-Later-button](https://github.com/AlxPle/Watch-Later-button) — chrome extension for saving videos to watch later.
